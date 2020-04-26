@@ -1,9 +1,12 @@
 import boto3
 import os
+#https://www.geeksforgeeks.org/python-os-path-exists-method/
+#https://www.geeksforgeeks.org/python-os-remove-method/
 if os.path.exists("ebs_volumes.txt"):
   os.remove("ebs_volumes.txt")
 else:
-  print("The file does not exist") 
+  print("The file does not exist")
+# https://www.w3schools.com/python/python_file_write.asp
 f = open("ebs_volumes.txt", "w")
 #https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html#EC2.ServiceResource.volumes
 #https://stackoverflow.com/questions/34002826/list-ec2-volumes-in-boto
