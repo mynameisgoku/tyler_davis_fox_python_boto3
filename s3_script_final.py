@@ -43,4 +43,5 @@ for bucket in s3_resource.buckets.all():
     f.close()
 
 #2. uploads a file in the newly created bucket that is a list of all buckets in the account. 
+#https://stackoverflow.com/questions/37017244/uploading-a-file-to-a-s3-bucket-with-a-prefix-using-boto3
 s3_resource.meta.client.upload_file('s3_list.txt', bucketName, 's3_list.txt')
